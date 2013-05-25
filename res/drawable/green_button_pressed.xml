@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item>
+        <nine-patch android:src="@drawable/green_pressed"/>
+    </item>
+    <item android:left="-23dp">
+        <bitmap android:src="@drawable/round_green_check" android:gravity="left" />
+    </item>
+</layer-list>

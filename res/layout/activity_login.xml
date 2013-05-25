@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout_background"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar" />
+
+    <!-- Container for inputting of email and password -->
+
+    <LinearLayout
+        android:id="@+id/login_input_wait"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/layout_container_margin"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <!-- TextView for login screen caution -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/view_gap_size"
+            android:layout_marginTop="@dimen/view_gap_size"
+            android:text="@string/login_caution"
+            android:textSize="@dimen/text_font_size" />
+
+        <!-- Part for getting user information -->
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:shrinkColumns="1"
+            android:stretchColumns="1" >
+
+            <TableRow>
+
+                <!-- Label for email -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login_email"
+                    android:textSize="@dimen/text_font_size" />
+
+                <!-- EditText for email -->
+
+                <EditText
+                    android:id="@+id/edit_login_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/edittext_margin_left"
+                    android:background="@drawable/edittext_back"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:textSize="@dimen/text_font_size" >
+                </EditText>
+            </TableRow>
+
+            <TableRow>
+
+                <!-- Label for password -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login_password"
+                    android:textSize="@dimen/text_font_size" />
+
+                <!-- EditText for password -->
+
+                <EditText
+                    android:id="@+id/edit_login_passwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/edittext_margin_left"
+                    android:background="@drawable/edittext_back"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:textSize="@dimen/text_font_size" />
+            </TableRow>
+        </TableLayout>
+
+        <!-- TextView for Password reset comment -->
+
+        <TextView
+            android:id="@+id/text_passwd_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_gap_size"
+            android:textSize="@dimen/text_font_size" />
+
+        <!-- Button for login -->
+
+        <Button
+            android:id="@+id/btn_login"
+            style="@style/myButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/view_gap_size"
+            android:background="@drawable/button_background"
+            android:text="@string/login_login" />
+    </LinearLayout>
+
+    <!-- Container for notifiing the input failure -->
+
+    <LinearLayout
+        android:id="@+id/login_input_failure"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/layout_container_margin"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <!-- Label for failure reason -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/view_gap_size"
+            android:gravity="center"
+            android:text="@string/login_failure_require_fields"
+            android:textSize="@dimen/text_font_size" />
+
+        <!-- Button for ok -->
+
+        <Button
+            android:id="@+id/btn_ok"
+            style="@style/myButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/view_gap_size"
+            android:background="@drawable/button_background"
+            android:text="@string/login_ok" />
+    </LinearLayout>
+
+    <!-- Container for "Try Again" and "Register" request. -->
+
+    <LinearLayout
+        android:id="@+id/login_request"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/layout_container_margin"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <!-- Label for requesting of "Try Again" -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/view_gap_size"
+            android:gravity="center"
+            android:text="@string/login_request_try_again"
+            android:textSize="@dimen/text_font_size" />
+
+        <!-- Button for "Try Again" -->
+
+        <Button
+            android:id="@+id/btn_tryagain"
+            style="@style/myButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/view_gap_size"
+            android:background="@drawable/button_background"
+            android:text="@string/login_try_again" />
+
+        <!-- Label for requesting of "Register" -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/view_gap_size"
+            android:gravity="center"
+            android:text="@string/login_request_register"
+            android:textSize="@dimen/text_font_size" />
+
+        <!-- Button for register -->
+
+        <Button
+            android:id="@+id/btn_register"
+            style="@style/myButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/button_background"
+            android:text="@string/login_register" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,141 @@
+<resources>
+
+    <!-- Label on Application List -->
+    <string name="app_name">SPARK</string>
+
+    <!-- Labels on LandingActivity -->
+	<string name="spark">SPARK</string>
+	<string name="landing_welcome">Welcome to the SPARK mobile application. If you have already registered, you can click Sign In to get into the system, if not Register, it only takes a moment.</string>
+	<string name="landing_signin">Sign In</string>
+
+    <!-- Labels on LoginActivity -->
+    <string name="login_email">Email*</string>
+    <string name="login_password">Password*</string>
+    <string name="login_caution">If you do not have an email and password setup for this event, please contact the registration team or event manager.</string>
+    <string name="login_password_reset">"If you have forgotten or need to reset your password, click "</string>
+    <string name="login_here">HERE</string>
+    <string name="login_login">Login</string>
+    <string name="login_failure_require_fields">Please fill in all required fields before submitting the form.</string>
+    <string name="login_ok">OK</string>
+    <string name="login_request_try_again">We were unable to find your record in the system, please try again.</string>
+    <string name="login_try_again">Try Again</string>
+    <string name="login_request_register">If you do not have a username and password, you can register:</string>
+    <string name="login_register">Register</string>
+
+    <!-- Labels on RegisterActivity -->
+    <string name="register_firstname">First Name*</string>
+    <string name="register_lastname">Last Name*</string>
+    <string name="register_mobile">Mobile*</string>
+    <string name="register_resister">Register</string>
+    <string name="register_success">Your account has been created successfully. Please log in to your account.</string>
+    
+    <!-- Labels on ProjectsActivity -->
+    <string name="projects_select_yours">Select your event</string>
+    <string name="projects_select_prompt">You are registered for multiple events that are currently live. Please select the one you would like to login below.</string>
+    <string name="projects_event">Event</string>
+    
+    <!-- Labels on MainActivity (EventHome) -->
+    <string name="title_engage_us">NetScout Engage US 2010</string>
+    <string name="title_hs_demo">HS Demo</string>
+    <string name="eventhome_tag">Event Home</string>
+    <string name="eventhome_welcome">Welcome to the <b>NetScout Engage US 2010</b> virtural event platform.</string>
+    <string name="sessions">Sessions</string>
+    <string name="eventhome_currentlylive">Currently Live!</string>
+
+    <string-array name="event_home_items">
+        <item>myEvent</item>
+        <item>Agenda</item>
+        <item>Exhibitors</item>
+        <item>Map</item>
+        <item>Collateral</item>
+        <item>News</item>
+        <item>Network</item>
+        <!-- <item >myVoice</item> -->
+    </string-array>
+    
+    <string name="agenda">Agenda</string>
+    <string name="exhibitors">Exhibitors</string>
+    <string name="map">Map</string>
+    <string name="collateral">Collateral</string>
+    <string name="news">News</string>
+    <string name="network">Network</string>
+
+    <string name="myevent_tag">MyEvent</string>
+    <string name="myagenda_tag">MyAgenda</string>
+    <string name="mysessions_tag">MySessions</string>
+    <string name="myexhibitors_tag">MyExhibitors</string>
+    <string name="mycollateral_tag">MyCollateral</string>
+    <string name="mynetwork_tag">MyNetwork</string>
+    <string name="myprofile_tag">MyProfile</string>
+
+    <!-- Labels on mySessions Activity -->
+    <string name="back">Back</string>
+    <string name="logout">Logout</string>
+    <string name="filter_items">Filter items…</string>
+    <string name="loading">Loading…</string>
+    <string name="add_to_myagenda">Add to MyAgenda</string>
+    <string name="remove_from_myagenda">Remove from MyAgenda</string>
+    <string name="check_in">Check In</string>
+    <string name="checked_in">Checked In</string>
+    <string name="take_survey">Take Survey</string>
+    <string name="finish_survey">Finish Survey</string>
+    <string name="track">"Track: "</string>
+    <string name="speaker">"Speaker: "</string>
+
+    <!-- Labels on myExhibitors Activity -->
+    <string name="home">Home</string>
+    <string name="add_to_mymap">Add to MyMap</string>
+    <string name="remove_from_mymap">Remove from MyMap</string>
+    <string name="schedule_meeting">Schedule Meeting</string>
+    <string name="booth">Booth</string>
+    <string name="schedule_success">Your meeting has been scheduled successfully.</string>
+    <string name="website">"WebSite: "</string>
+    <string name="setup_meeting">", would like to setup a meeting."</string>
+
+    <!-- Labels on myCollateral Activity -->
+    <string name="add_to_mycollateral">Add to MyCollateral</string>
+    <string name="email_me_mycallateral_list">Email me myCollateral list</string>
+    <string name="remove_from_mycollateral">Remove from MyCollateral</string>
+    <string name="view_document">View Documemt</string>
+    <string name="email_sent_success">"Email sent successfully to "</string>
+    
+    <!-- Labels on News Activity Activity -->
+    <string name="author">Author</string>
+    <string name="unread">Unread</string>
+
+    <!-- Labels on myNetwork Activity -->
+    <string name="pending_requests">Pending Requests</string>
+    <string name="add_to_mynetwork">Add to MyNetwork</string>
+    <string name="remove_from_mynetwork">Remove from MyNetwork</string>
+    <string name="send_message">Send Message</string>
+    <string name="invited">Invited</string>
+
+    <!-- Labels on myProfile Actvity -->
+    <string name="here_is_your_profile">Here is your profile, where you can review your personal information and update your account settings.</string>
+    <string name="name">"Name: "</string>
+    <string name="company">"Company: "</string>
+    <string name="email">"Email: "</string>
+    <string name="show_email">"Show Email: "</string>
+    <string name="allow_network_to_email_me">Allow Network to Email me:</string>
+    <string name="allow_network_to_sms_me">Allow Network to SMS me:</string>
+    <string name="sms_reminders">SMS Reminders:</string>
+
+    <!-- Labels on SendMessage Actvity -->
+    <string name="message_for">"Message for "</string>
+    <string name="sponsored_by">Sponsored by</string>
+    
+    <!-- Finish Survey Activity -->
+    <string name="thank_you">Thank you for attending</string>
+    <string name="help_us">please help us with a brief survey.</string>
+    
+    <string name="best">Best</string>
+    <string name="better">Better</string>
+    <string name="neutral">Neutral</string>
+    <string name="lesser">Lesser</string>
+    <string name="worst">Worst</string>
+    
+    <string name="submit">Submit</string>
+    
+    <string name="splash_screen">splash_screen</string>
+    
+</resources>

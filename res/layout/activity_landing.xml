@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout_background"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar" />
+
+    <!-- Part for getting user information -->
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/layout_container_margin"
+        android:background="#FFDDDDDD"
+        android:shrinkColumns="0"
+        android:stretchColumns="0" >
+
+        <TableRow
+            android:layout_weight="1.0"
+            android:layout_margin="@dimen/landing_table_row_margin"
+            android:background="#EAEAEA" >
+
+            <!-- ImageView for welcome logo -->
+
+            <ImageView
+                android:background="@drawable/jumpfiretrans"
+                android:contentDescription="@string/spark" />
+        </TableRow>
+
+        <TableRow
+            android:layout_marginLeft="@dimen/landing_table_row_margin"
+            android:layout_marginRight="@dimen/landing_table_row_margin"
+            android:background="#EAEAEA" >
+
+            <!-- Label for welcome logo -->
+
+            <TextView
+                android:layout_margin="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="@string/landing_welcome" />
+        </TableRow>
+
+        <TableRow
+            android:layout_margin="@dimen/landing_table_row_margin"
+            android:background="#EAEAEA" >
+
+            <!-- Button for Sign in -->
+
+            <Button
+                android:id="@+id/btn_signin"
+                style="@style/myButtonStyle"
+                android:layout_margin="5dp"
+                android:background="@drawable/button_background"
+                android:text="@string/landing_signin" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

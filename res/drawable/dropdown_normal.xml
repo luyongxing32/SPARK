@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <gradient android:startColor="#fffdfdfd" android:endColor="#ffeeeeee" android:angle="270.0"/>
+            <corners android:radius="15.0dp" />
+            <stroke android:width="@dimen/button_stroke_size" android:color="#ffcccccc" />
+            <padding android:left="@dimen/button_padding_size"
+	       		android:top="@dimen/button_padding_size" 
+	        	android:right="@dimen/button_padding_size" 
+	        	android:bottom="@dimen/button_padding_size" />
+        </shape>
+    </item>
+    <item>
+        <bitmap android:src="@drawable/round_down_arrow" android:gravity="right" 
+            android:antialias="true" android:dither="true" />
+    </item>
+</layer-list>

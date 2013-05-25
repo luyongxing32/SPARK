@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout_background"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar" />
+
+    <!-- Part to display detail information -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layout_container_margin"
+                android:background="@drawable/outline"
+                android:orientation="vertical"
+                android:padding="@dimen/layout_container_margin" >
+
+                <TextView
+                    android:id="@+id/text_message_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/view_gap_size"
+                    android:layout_marginTop="@dimen/view_gap_size"
+                    android:textSize="@dimen/item_text_size" />
+
+                <EditText
+                    android:id="@+id/edit_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_back"
+                    android:inputType="textMultiLine"
+                    android:lineSpacingMultiplier="1.1"
+                    android:minLines="2" />
+
+                <Button
+                    android:id="@+id/btn_send"
+                    style="@style/myButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="@dimen/view_gap_size"
+                    android:background="@drawable/button_background"
+                    android:text="@string/send_message" />
+
+                <TextView
+                    android:id="@+id/text_sent_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/view_gap_size"
+                    android:padding="10dp"
+                    android:textSize="@dimen/item_text_size" />
+            </LinearLayout>
+
+            <include layout="@layout/three_buttons_bar" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

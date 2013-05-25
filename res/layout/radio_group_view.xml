@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RadioGroup
+        android:id="@+id/radioGroupQuality"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffcccccc" >
+
+        <RadioButton
+            android:id="@+id/radio5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1.0dp"
+            android:background="@drawable/item_back"
+            android:text="@string/best" />
+
+        <RadioButton
+            android:id="@+id/radio4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1.0dp"
+            android:background="@drawable/item_back"
+            android:text="@string/better" />
+
+        <RadioButton
+            android:id="@+id/radio3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1.0dp"
+            android:background="@drawable/item_back"
+            android:text="@string/neutral" />
+
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1.0dp"
+            android:background="@drawable/item_back"
+            android:text="@string/lesser" />
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_back"
+            android:text="@string/worst" />
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/radioGroupQuality"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/round_frame" />
+
+</RelativeLayout>

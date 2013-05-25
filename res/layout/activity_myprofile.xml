@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout_background"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar" />
+
+    <ScrollView
+        android:id="@+id/vscroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/layout_container_margin" >
+
+                <!-- View for welcome text -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/view_gap_size"
+                    android:layout_marginTop="@dimen/view_gap_size"
+                    android:text="@string/here_is_your_profile"
+                    android:textSize="@dimen/text_font_size" />
+
+                <!-- view for event home list table -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical" >
+
+                    <!-- View for title of event list -->
+
+                    <TextView
+                        style="@style/ListViewHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/list_round_header"
+                        android:text="@string/myprofile_tag" />
+
+                    <!-- View for my virtural platform -->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <!-- ListView for user event -->
+
+                        <TableLayout
+                            android:id="@+id/myprofile_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#FFCCCCCC"
+                            android:paddingBottom="4dp"
+                            android:shrinkColumns="0" >
+
+                            <TextView
+                                android:id="@+id/text_name"
+                                style="@style/TextViewStyle.Bold.Black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#FFFFFFFF"
+                                android:paddingBottom="10dp"
+                                android:paddingLeft="@dimen/text_gap_size"
+                                android:paddingTop="10dp" />
+
+                            <TextView
+                                android:id="@+id/text_company"
+                                style="@style/TextViewStyle.Bold.Black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/field_bottom_margin"
+                                android:background="#FFFFFFFF"
+                                android:paddingBottom="10dp"
+                                android:paddingLeft="@dimen/text_gap_size"
+                                android:paddingTop="10dp" />
+
+                            <TextView
+                                android:id="@+id/text_email"
+                                style="@style/TextViewStyle.Bold.Black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/field_bottom_margin"
+                                android:background="#FFFFFFFF"
+                                android:paddingBottom="10dp"
+                                android:paddingLeft="@dimen/text_gap_size"
+                                android:paddingTop="10dp" />
+
+                            <TableRow
+                                android:layout_marginTop="@dimen/field_bottom_margin"
+                                android:background="#FFFFFFFF"
+                                android:gravity="center_vertical"
+                                android:padding="10dp" >
+
+                                <!-- Label to show email -->
+
+                                <TextView
+                                    style="@style/TextViewStyle.Bold.Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/table_text_left_margin"
+                                    android:text="@string/show_email" />
+
+                                <!-- Switch to show email -->
+
+                                <ToggleButton
+                                    android:id="@+id/show_email"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/table_text_left_margin"
+                                    android:layout_marginRight="@dimen/table_switch_right_margin" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_marginTop="@dimen/field_bottom_margin"
+                                android:background="#FFFFFFFF"
+                                android:gravity="center_vertical"
+                                android:padding="10dp" >
+
+                                <!-- Label to allow email -->
+
+                                <TextView
+                                    style="@style/TextViewStyle.Bold.Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/table_text_left_margin"
+                                    android:text="@string/allow_network_to_email_me" />
+
+                                <!-- Switch to allow email -->
+
+                                <ToggleButton
+                                    android:id="@+id/allow_email"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/table_text_left_margin"
+                                    android:layout_marginRight="@dimen/table_switch_right_margin" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_marginTop="@dimen/field_bottom_margin"
+                                android:background="#FFFFFFFF"
+                                android:gravity="center_vertical"
+                                android:padding="10dp" >
+
+                                <!-- Label to allow sms -->
+
+                                <TextView
+                                    style="@style/TextViewStyle.Bold.Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/table_text_left_margin"
+                                    android:text="@string/allow_network_to_sms_me" />
+
+                                <!-- Switch to allow sms -->
+
+                                <ToggleButton
+                                    android:id="@+id/allow_sms"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/table_text_left_margin"
+                                    android:layout_marginRight="@dimen/table_switch_right_margin" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_marginTop="@dimen/landing_table_row_margin"
+                                android:background="#FFFFFFFF"
+                                android:gravity="center_vertical"
+                                android:padding="10dp" >
+
+                                <!-- Label to allow sms remainder -->
+
+                                <TextView
+                                    style="@style/TextViewStyle.Bold.Black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/table_text_left_margin"
+                                    android:text="@string/sms_reminders" />
+
+                                <!-- EditText for allow sms remainder -->
+
+                                <ToggleButton
+                                    android:id="@+id/allow_sms_remainder"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/table_text_left_margin"
+                                    android:layout_marginRight="@dimen/table_switch_right_margin" />
+                            </TableRow>
+                        </TableLayout>
+
+                        <!-- View for boader of event listview -->
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignBottom="@+id/myprofile_content"
+                            android:layout_alignTop="@+id/myprofile_content"
+                            android:background="@drawable/list_boader" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <include layout="@layout/three_buttons_bar" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

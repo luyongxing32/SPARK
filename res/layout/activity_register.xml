@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout_background"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar" />
+
+    <!-- Container for inputting of firstname, lastname, mobile, email and password -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/register_input_wait"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/layout_container_margin"
+                android:orientation="vertical" >
+
+                <!-- Part for getting user information -->
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="1" >
+
+                    <TableRow>
+
+                        <!-- Label for firstname -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/register_firstname"
+                            android:textSize="@dimen/text_font_size" />
+
+                        <!-- EditText for firstname -->
+
+                        <EditText
+                            android:id="@+id/edit_register_firstname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/edittext_margin_left"
+                            android:background="@drawable/edittext_back"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:textSize="@dimen/text_font_size" >
+                        </EditText>
+                    </TableRow>
+
+                    <TableRow>
+
+                        <!-- Label for lastname -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/register_lastname"
+                            android:textSize="@dimen/text_font_size" />
+
+                        <!-- EditText for lastname -->
+
+                        <EditText
+                            android:id="@+id/edit_register_lastname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/edittext_margin_left"
+                            android:background="@drawable/edittext_back"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:textSize="@dimen/text_font_size" >
+                        </EditText>
+                    </TableRow>
+
+                    <TableRow>
+
+                        <!-- Label for mobile -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/register_mobile"
+                            android:textSize="@dimen/text_font_size" />
+
+                        <!-- EditText for mobile -->
+
+                        <EditText
+                            android:id="@+id/edit_register_mobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/edittext_margin_left"
+                            android:background="@drawable/edittext_back"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:textSize="@dimen/text_font_size" >
+                        </EditText>
+                    </TableRow>
+
+                    <TableRow>
+
+                        <!-- Label for email -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/login_email"
+                            android:textSize="@dimen/text_font_size" />
+
+                        <!-- EditText for email -->
+
+                        <EditText
+                            android:id="@+id/edit_register_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/edittext_margin_left"
+                            android:background="@drawable/edittext_back"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1"
+                            android:textSize="@dimen/text_font_size" >
+                        </EditText>
+                    </TableRow>
+
+                    <TableRow>
+
+                        <!-- Label for password -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/login_password"
+                            android:textSize="@dimen/text_font_size" />
+
+                        <!-- EditText for password -->
+
+                        <EditText
+                            android:id="@+id/edit_register_passwd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/edittext_margin_left"
+                            android:background="@drawable/edittext_back"
+                            android:inputType="text"
+                            android:textSize="@dimen/text_font_size" />
+                    </TableRow>
+                </TableLayout>
+
+                <!-- Button for login -->
+
+                <Button
+                    android:id="@+id/btn_register"
+                    style="@style/myButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_background"
+                    android:text="@string/login_register" />
+            </LinearLayout>
+
+            <!-- Container for notifiing the input failure -->
+
+            <LinearLayout
+                android:id="@+id/register_input_failure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/layout_container_margin"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <!-- Label for failure reason -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/view_gap_size"
+                    android:gravity="center"
+                    android:text="@string/login_failure_require_fields"
+                    android:textSize="@dimen/text_font_size" />
+
+                <!-- Button for ok -->
+
+                <Button
+                    android:id="@+id/btn_ok"
+                    style="@style/myButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_background"
+                    android:text="@string/login_ok" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/end_line"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@string/spark"
+                android:textColor="#C0C0C0"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

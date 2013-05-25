@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/listitem_back" >
+
+    <!-- view to display the checking state -->
+
+    <ImageView
+        android:id="@+id/img_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/view_gap_size"
+        android:layout_marginRight="@dimen/view_gap_size"
+        android:contentDescription="@string/myagenda_tag" />
+
+    <!-- view to display the kind name -->
+
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_toRightOf="@id/img_icon"
+        android:textSize="@dimen/titlebar_font_size"
+        android:textStyle="bold" />
+
+    <!-- view to display the extra event information -->
+
+    <TextView
+        android:id="@+id/text_extra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/view_gap_size"
+        android:layout_marginRight="@dimen/view_gap_size"
+        android:background="@drawable/round_text_back"
+        android:gravity="center"
+        android:textSize="10sp" />
+
+</RelativeLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/listitem_back" >
+
+    <ImageView
+        android:id="@+id/img_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/view_gap_size"
+        android:contentDescription="@string/myagenda_tag" />
+
+    <LinearLayout
+        android:id="@+id/network_part"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/img_check"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/view_gap_size"
+        android:layout_toLeftOf="@+id/text_item_invited"
+        android:orientation="vertical" >
+
+        <!-- view to display the name -->
+
+        <TextView
+            android:id="@+id/text_item_name"
+            style="@style/ListViewItemStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="1" />
+
+        <!-- view to display the title -->
+
+        <TextView
+            android:id="@+id/text_item_title"
+            style="@style/ListViewItemStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/view_gap_size"
+            android:layout_marginTop="@dimen/view_gap_size"
+            android:gravity="center"
+            android:maxLines="1" />
+    </LinearLayout>
+
+    <!-- view to display the extra information -->
+
+    <TextView
+        android:id="@+id/text_item_invited"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/view_gap_size"
+        android:layout_marginRight="@dimen/view_gap_size"
+        android:background="@drawable/round_text_back"
+        android:gravity="center"
+        android:text="@string/invited"
+        android:textSize="12sp" />
+
+</RelativeLayout>

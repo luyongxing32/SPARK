@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!-- View for removing focus in EditText at first launch -->
+
+    <LinearLayout
+        android:id="@+id/empty_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+    <!-- Titlebar -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/titlebar_back" >
+
+        <!-- Back Button -->
+
+        <ImageView
+            android:id="@+id/img_title_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/view_gap_size"
+            android:background="@drawable/title_back"
+            android:clickable="true"
+            android:contentDescription="@string/back"
+            android:visibility="gone" />
+
+        <!-- Title TextView -->
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/img_title_back"
+            android:layout_toLeftOf="@+id/img_title_home"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/spark"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/titlebar_font_size"
+            android:textStyle="bold" />
+
+        <!-- Home Button -->
+
+        <ImageView
+            android:id="@+id/img_title_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/view_gap_size"
+            android:background="@drawable/title_home"
+            android:clickable="true"
+            android:contentDescription="@string/home"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

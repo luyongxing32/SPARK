@@ -1,0 +1,61 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppTheme" parent="android:style/Theme.Light.NoTitleBar.Fullscreen" />
+    
+    <style name="myButtonStyle" parent="@android:style/Widget.Button">
+        <item name="android:textSize">@dimen/button_font_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="myThreeButtonStyle" parent="@android:style/Widget.Button">
+        <item name="android:textSize">@dimen/button_small_font_size</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="ListViewHeaderStyle" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">@dimen/list_header_font_size</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="ListViewItemStyle" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">@dimen/list_item_font_size</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="ListViewItemStyleLarge" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">@dimen/list_item_large_font_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+    
+    <style name="SpinnerTextViewItemStyle" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">@dimen/text_font_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="myActionButtonStyle" parent="@android:style/Widget.Button">
+        <item name="android:textSize">@dimen/titlebar_font_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    
+    <style name="ItemTitleStyle" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">@dimen/item_title_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="ItemTimeStyle" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">@dimen/item_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="TextViewStyle.Bold.Black" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/text_font_size</item>
+		<item name="android:textStyle">bold</item>   
+    </style>
+    
+</resources>

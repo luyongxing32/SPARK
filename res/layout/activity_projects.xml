@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout_background"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar" />
+
+    <LinearLayout
+        android:id="@+id/engage_project"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/layout_container_margin"
+        android:orientation="vertical" >
+
+        <!-- TextView to select event -->
+
+        <TextView
+            android:id="@+id/text_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/view_gap_size"
+            android:text="@string/projects_select_yours"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_font_size"
+            android:textStyle="bold" />
+
+        <!-- TextView for selection prompt -->
+
+        <TextView
+            android:id="@+id/text_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/view_gap_size"
+            android:text="@string/projects_select_prompt"
+            android:textSize="@dimen/text_font_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/view_gap_size" >
+
+            <!-- Label for event kind -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/projects_event"
+                android:textSize="@dimen/text_font_size" />
+
+            <!-- Spinner to select a project -->
+
+            <Spinner
+                android:id="@+id/spin_project"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spinner_padding_size"
+                android:paddingRight="@dimen/spinner_padding_size"
+                android:background="@drawable/dropdown_back" />
+        </LinearLayout>
+
+        <!-- Button for login -->
+
+        <Button
+            android:id="@+id/btn_login"
+            style="@style/myButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/view_gap_size"
+            android:background="@drawable/button_background"
+            android:text="@string/login_login" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#000000" />
+
+</LinearLayout>

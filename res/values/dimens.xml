@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Margin size of Activity container -->
+    <dimen name="layout_container_margin">15dp</dimen>
+    
+    <!-- Padding size of TableRow on LandingActivity -->
+    <dimen name="landing_table_row_margin">1dp</dimen>
+    
+    <!-- Stroke size on Button-->
+    <dimen name="button_stroke_size">1dp</dimen>
+    
+    <!-- Padding size between TextView and Spinner on ProjectsActivity -->
+    <dimen name="spinner_padding_size">30dp</dimen>
+    
+    <!-- titlebar font size used on Activity  -->
+    <dimen name="titlebar_font_size">16sp</dimen>
+    
+    <!-- TextView font size used on Activity -->
+    <dimen name="text_font_size">15sp</dimen>
+    
+    <!-- Button font size used on Activity -->
+    <dimen name="button_font_size">16sp</dimen>
+    
+    <!-- Three Button font size used on Activity -->
+    <dimen name="button_small_font_size">12sp</dimen>
+    
+    <!-- padding size on Button -->
+    <dimen name="button_padding_size">10dp</dimen>
+    <dimen name="button_paddingleft_size">20dp</dimen>
+    
+    <!-- Header font size on ListView -->
+    <dimen name="list_header_font_size">13sp</dimen>
+    
+    <!-- Item font size on ListView -->
+    <dimen name="list_item_font_size">16sp</dimen>
+    
+    <!-- Item font size on ListView -->
+    <dimen name="list_item_large_font_size">18sp</dimen>
+    
+    <!-- Top, Bottom padding size on ListView -->
+    <dimen name="list_item_padding_size">3dp</dimen>
+    
+    <!-- Values used on LoginActivity -->
+    <dimen name="edittext_margin_left">10dp</dimen>
+    <dimen name="view_gap_size">8dp</dimen>
+    
+    <!-- Values used on ItemDetailActivity -->
+    <dimen name="item_title_text_size">20sp</dimen>
+    <dimen name="item_text_size">15sp</dimen>
+    
+    <!-- Values used on myProfileActivity -->
+    <dimen name="field_bottom_margin">2dp</dimen>
+    <dimen name="text_gap_size">15dp</dimen>
+    <dimen name="table_content_margin">10dp</dimen>
+    <dimen name="table_text_left_margin">5dp</dimen>
+    <dimen name="table_switch_right_margin">10dp</dimen>
+    
+    
+</resources>
