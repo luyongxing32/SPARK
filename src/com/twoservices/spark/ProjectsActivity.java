@@ -7,8 +7,6 @@
 
 package com.twoservices.spark;
 
-import java.util.ArrayList;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,6 +20,8 @@ import android.widget.Spinner;
 
 import com.twoservices.spark.link.Feedback;
 import com.twoservices.spark.link.LoginResult;
+
+import java.util.ArrayList;
 
 /**
  * Project selection Activity of <B>"Engage US"</B>

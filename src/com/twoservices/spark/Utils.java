@@ -1,9 +1,5 @@
 package com.twoservices.spark;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -16,12 +12,16 @@ import android.widget.Toast;
 
 import com.twoservices.spark.link.Feedback;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Utils {
 	
 	/**
 	 * Flag that decides whether debug mode or not
 	 */
-	public static final boolean DEBUG = true;
+	public static final boolean DEBUG = false;
 	
 	/**
 	 * Get the various styled welcome string

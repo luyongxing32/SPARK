@@ -1,8 +1,8 @@
 package com.twoservices.spark.link;
 
-import java.util.ArrayList;
-
 import com.google.gson.annotations.SerializedName;
+
+import java.util.ArrayList;
 
 public class SurveyResult implements IResult {
 

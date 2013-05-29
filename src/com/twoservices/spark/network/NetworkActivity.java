@@ -7,8 +7,6 @@
 
 package com.twoservices.spark.network;
 
-import java.util.ArrayList;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
@@ -29,6 +27,8 @@ import com.twoservices.spark.link.LoadFeedData;
 import com.twoservices.spark.link.NetworkResult;
 import com.twoservices.spark.list.TwoRowItem;
 import com.twoservices.spark.list.TwoRowItemView;
+
+import java.util.ArrayList;
 
 /**
  * News activity of <B>"Engage US"</B>

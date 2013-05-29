@@ -7,8 +7,6 @@
 
 package com.twoservices.spark.news;
 
-import java.util.ArrayList;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -22,6 +20,8 @@ import com.twoservices.spark.abstarct.FilteredListActivity;
 import com.twoservices.spark.link.NewsResult;
 import com.twoservices.spark.list.SectionedItem;
 import com.twoservices.spark.list.SectionedItemView;
+
+import java.util.ArrayList;
 
 /**
  * News activity of <B>"Engage US"</B>

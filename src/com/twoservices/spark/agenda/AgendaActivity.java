@@ -7,8 +7,6 @@
 
 package com.twoservices.spark.agenda;
 
-import java.util.ArrayList;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -21,6 +19,8 @@ import com.twoservices.spark.abstarct.FilteredListActivity;
 import com.twoservices.spark.link.AgendaResult;
 import com.twoservices.spark.list.SectionedItem;
 import com.twoservices.spark.list.SectionedItemView;
+
+import java.util.ArrayList;
 
 /**
  * Agenda activity of <B>"Engage US"</B>

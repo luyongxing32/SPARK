@@ -7,8 +7,6 @@
 
 package com.twoservices.spark.network;
 
-import java.util.ArrayList;
-
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -20,8 +18,10 @@ import com.twoservices.spark.Utils;
 import com.twoservices.spark.abstarct.InstanceMessageActivity;
 import com.twoservices.spark.link.Feedback;
 import com.twoservices.spark.link.LoadFeedData;
-import com.twoservices.spark.link.MessageResult;
 import com.twoservices.spark.link.MessageInfo;
+import com.twoservices.spark.link.MessageResult;
+
+import java.util.ArrayList;
 
 /**
  * Activity to send message to Network of <B>"Engage US"</B>

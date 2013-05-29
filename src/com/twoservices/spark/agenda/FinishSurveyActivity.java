@@ -7,8 +7,6 @@
 
 package com.twoservices.spark.agenda;
 
-import java.util.ArrayList;
-
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -35,6 +33,8 @@ import com.twoservices.spark.link.Feedback;
 import com.twoservices.spark.link.LoadFeedData;
 import com.twoservices.spark.link.SurveyItem;
 import com.twoservices.spark.link.SurveyResult;
+
+import java.util.ArrayList;
 
 /**
  * Finish Survey activity of <B>"Engage US"</B>

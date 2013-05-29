@@ -7,8 +7,6 @@
 
 package com.twoservices.spark.collateral;
 
-import java.util.ArrayList;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -24,6 +22,8 @@ import com.twoservices.spark.link.Feedback;
 import com.twoservices.spark.link.LoadFeedData;
 import com.twoservices.spark.list.CountedItem;
 import com.twoservices.spark.list.CountedItemView;
+
+import java.util.ArrayList;
 
 /**
  * Collateral activity of <B>"Engage US"</B>

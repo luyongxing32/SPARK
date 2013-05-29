@@ -7,12 +7,6 @@
 
 package com.twoservices.spark.abstarct;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.net.URLConnection;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -38,6 +32,12 @@ import com.twoservices.spark.Utils;
 import com.twoservices.spark.link.Feedback;
 import com.twoservices.spark.link.LoadFeedData;
 import com.twoservices.spark.link.SponsorResult;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URLConnection;
 
 /**
  * Skeleton activity of <B>"Engage US"</B> with sponsor function
