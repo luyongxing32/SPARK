@@ -30,6 +30,11 @@ public abstract class ItemDetailActivity extends Activity2 implements View.OnCli
 	// TextView that will display the website and email of selected item
 	protected TextView mTextItemWebsite;
 	protected TextView mTextItemEmail;
+
+    // TextView that will display user's privacy information
+    protected TextView mTextItemContact;
+    protected TextView mTextItemPhone;
+    protected TextView mTextItemAddress;
 	
 	// TextView that will display the time of selected item
 	protected TextView mTextItemDate;
@@ -90,7 +95,10 @@ public abstract class ItemDetailActivity extends Activity2 implements View.OnCli
 		mImageItemLogo = (ImageView) findViewById(R.id.image_item_logo);
 		mTextItemWebsite = (TextView) findViewById(R.id.text_item_website);
 		mTextItemEmail = (TextView) findViewById(R.id.text_item_email);
-		mTextItemDate = (TextView) findViewById(R.id.text_item_date);
+        mTextItemContact = (TextView) findViewById(R.id.text_item_contact);
+        mTextItemPhone = (TextView) findViewById(R.id.text_item_phone);
+        mTextItemAddress = (TextView) findViewById(R.id.text_item_address);
+        mTextItemDate = (TextView) findViewById(R.id.text_item_date);
 		mTextItemTime = (TextView) findViewById(R.id.text_item_time);
 		mTextItemContent = (TextView) findViewById(R.id.text_item_content);
 		mTextItemAuthor = (TextView) findViewById(R.id.text_item_author);
@@ -99,7 +107,10 @@ public abstract class ItemDetailActivity extends Activity2 implements View.OnCli
 		mImageItemLogo.setVisibility(View.GONE);
 		mTextItemWebsite.setVisibility(View.GONE);
 		mTextItemEmail.setVisibility(View.GONE);
-		mTextItemMisc.setVisibility(View.GONE);
+        mTextItemContact.setVisibility(View.GONE);
+        mTextItemPhone.setVisibility(View.GONE);
+        mTextItemAddress.setVisibility(View.GONE);
+        mTextItemMisc.setVisibility(View.GONE);
 	}
 	
 	/**

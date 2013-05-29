@@ -21,6 +21,7 @@ import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -47,8 +48,9 @@ public class FinishSurveyActivity extends Activity2 {
 	private static final String LOAD_ACTION = "Finish_Survey";
 	private static final String SUBMIT_ACTION = "Finish_Survey_Submit";
 	
-	private static final String RADIO_GROUT_TYPE = "BestWorst";
-	private static final String RATING_TYPE = "rating";
+	private static final String RADIO_BESTWORST_TYPE = "BestWorst";
+    private static final String RADIO_EXCELLENTPOOR_TYPE = "ExcellentPoor";
+    private static final String RATING_TYPE = "rating";
 	private static final String COMMENT_TYPE = "comment";
 	
 	private static final String ID_TYPE = "uu_session_id";
@@ -141,7 +143,8 @@ public class FinishSurveyActivity extends Activity2 {
 				getString(R.string.help_us)));
 		
 		for (SurveyItem item : result.questions) {
-			if (RADIO_GROUT_TYPE.equalsIgnoreCase(item.type)) {
+			if (RADIO_BESTWORST_TYPE.equalsIgnoreCase(item.type)
+                    || RADIO_EXCELLENTPOOR_TYPE.equalsIgnoreCase(item.type)) {
 				addRadioGroup(item);
 			} else if (RATING_TYPE.equalsIgnoreCase(item.type)) {
 				addRatingBar(item);
@@ -155,7 +158,7 @@ public class FinishSurveyActivity extends Activity2 {
 	}
 	
 	/**
-	 * 
+	 *
 	 * @param survey SurveyItem
 	 */
 	private void addRadioGroup(SurveyItem survey) {
@@ -165,12 +168,31 @@ public class FinishSurveyActivity extends Activity2 {
 		mSurveyList.addView(textView);
 		
 		// Set icon resource id
-		int radioButtonId = getResources().getIdentifier(
-					"radio" + survey.response_int, "id", getPackageName());
-		
 		View radioGroupView = mInflater.inflate(R.layout.radio_group_view, null);
 		RadioGroup radioGroup = (RadioGroup) radioGroupView.findViewById(R.id.radioGroupQuality);
-		radioGroup.check(radioButtonId);
+
+        // Get title strings
+        String[] titles = null;
+        if (survey.type.equals(RADIO_BESTWORST_TYPE)) {
+            titles = getResources().getStringArray(R.array.quality_titles);
+        } else if (survey.type.equals(RADIO_EXCELLENTPOOR_TYPE)) {
+            titles = getResources().getStringArray(R.array.feeling_titles);
+        }
+
+        // Change title of RadioButton
+        if (titles != null) {
+            for (int i = 0; i < 5; i++) {
+                int buttonResId = getResources().getIdentifier(
+                        String.format("radio%d", i + 1), "id", getPackageName());
+                RadioButton button = (RadioButton) radioGroup.findViewById(buttonResId);
+                button.setText(titles[i]);
+            }
+        }
+
+        int selectedRadioButtonId = getResources().getIdentifier(
+                "radio" + survey.response_int, "id", getPackageName());
+
+        radioGroup.check(selectedRadioButtonId);
 		radioGroup.setTag(survey.eval_question_id);
 		mSurveyList.addView(radioGroupView);
 		

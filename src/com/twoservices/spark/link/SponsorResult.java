@@ -12,5 +12,8 @@ public class SponsorResult implements IResult {
 	
 	@SerializedName("SPONSOR_URL")
 	public String sponsor_url;
-	
+
+    @SerializedName("SPONSOR_LINK")
+    public String sponsor_link;
+    
 }

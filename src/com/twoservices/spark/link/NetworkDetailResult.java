@@ -22,7 +22,28 @@ public class NetworkDetailResult implements IDetailResult {
 	
 	@SerializedName("TITLE")
 	public String title;
-	
+
+    @SerializedName("ADDRESS")
+    public String address;
+
+    @SerializedName("CITY")
+    public String city;
+
+    @SerializedName("STATE")
+    public String state;
+
+    @SerializedName("ZIP")
+    public String zip;
+
+    @SerializedName("EMAIL")
+    public String email;
+
+    @SerializedName("PHONE")
+    public String phone;
+
+    @SerializedName("MOBILE")
+    public String mobile;
+
 	@SerializedName("UU_NETWORK_CONTACT_ID")
 	public String network_contact_id;
 	

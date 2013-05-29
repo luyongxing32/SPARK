@@ -120,6 +120,24 @@ public class ExhibitorsDetailActivity extends ItemDetailActivity implements View
 				mTextItemEmail.setText(Utils.getLinkedText("mailto:" + email, getString(R.string.email), email, ""));
 				mTextItemEmail.setMovementMethod(LinkMovementMethod.getInstance());
 			}
+            
+            String contact = detailResult.contact;
+            if (!TextUtils.isEmpty(contact)) {
+                mTextItemContact.setVisibility(View.VISIBLE);
+                mTextItemContact.setText(getString(R.string.contact) + contact);
+            }
+
+            String phone = detailResult.phone;
+            if (!TextUtils.isEmpty(phone)) {
+                mTextItemPhone.setVisibility(View.VISIBLE);
+                mTextItemPhone.setText(getString(R.string.phone) + phone);
+            }
+
+            String address = detailResult.address;
+            if (!TextUtils.isEmpty(address)) {
+                mTextItemAddress.setVisibility(View.VISIBLE);
+                mTextItemAddress.setText(getString(R.string.address) + address);
+            }
 			
 			mTextItemDate.setText(getString(R.string.booth) + " " + detailResult.booth);
 			mTextItemTime.setVisibility(View.GONE);
@@ -149,6 +167,7 @@ public class ExhibitorsDetailActivity extends ItemDetailActivity implements View
 		
 		mBtnBlack.setVisibility(View.GONE);
 		mBtnGreen2.setText(R.string.schedule_meeting);
+        mBtnGreen2.setVisibility(View.GONE);
 	}
 	
 	/**

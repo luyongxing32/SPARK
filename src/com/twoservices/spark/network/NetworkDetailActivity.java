@@ -9,6 +9,7 @@ package com.twoservices.spark.network;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 
 import com.twoservices.spark.Action;
@@ -98,11 +99,34 @@ public class NetworkDetailActivity extends ItemDetailActivity implements View.On
 			mIsMyNetwork = detailResult.is_mynetwork.equals("Y");
 			
 			mTextItemTitle.setText(detailResult.name);
-			mTextItemDate.setVisibility(View.GONE);
-			mTextItemTime.setVisibility(View.GONE);
-			mTextItemContent.setText(Utils.getBoldNormalString(detailResult.company, detailResult.title));
-			mTextItemAuthor.setVisibility(View.GONE);
-		}
+
+            mTextItemWebsite.setVisibility(View.VISIBLE);
+            mTextItemWebsite.setText(Utils.getBoldNormalString(detailResult.company, detailResult.title));
+
+            mTextItemEmail.setVisibility(View.VISIBLE);
+            mTextItemEmail.setText(String.format("%s\n%s, %s %s", detailResult.address,
+                    detailResult.city, detailResult.state, detailResult.zip));
+
+            if (!TextUtils.isEmpty(detailResult.email)) {
+                mTextItemContact.setVisibility(View.VISIBLE);
+                mTextItemContact.setText(Utils.getLinkedText("mailto:" + detailResult.email, getString(R.string.email), detailResult.email, ""));
+            }
+
+            if (!TextUtils.isEmpty(detailResult.phone)) {
+                mTextItemPhone.setVisibility(View.VISIBLE);
+                mTextItemPhone.setText(getString(R.string.phone) + detailResult.phone);
+            }
+
+            if (!TextUtils.isEmpty(detailResult.mobile)) {
+                mTextItemAddress.setVisibility(View.VISIBLE);
+                mTextItemAddress.setText(getString(R.string.mobile) + detailResult.mobile);
+            }
+
+            mTextItemDate.setVisibility(View.GONE);
+            mTextItemTime.setVisibility(View.GONE);
+            mTextItemContent.setVisibility(View.GONE);
+            mTextItemAuthor.setVisibility(View.GONE);
+        }
 		
 		setTextOnActionButtons();
 	}

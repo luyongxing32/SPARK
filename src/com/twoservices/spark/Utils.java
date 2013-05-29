@@ -21,7 +21,7 @@ public class Utils {
 	/**
 	 * Flag that decides whether debug mode or not
 	 */
-	public static final boolean DEBUG = false;
+	public static final boolean DEBUG = true;
 	
 	/**
 	 * Get the various styled welcome string

@@ -12,6 +12,9 @@ import com.twoservices.spark.link.LoginResult;
 
 public class AccountInfo {
 
+    // Whether user logged in or not
+    public static boolean sLoggedIn = false;
+
 	// User contact id
 	public static String sContactId = "";
 	

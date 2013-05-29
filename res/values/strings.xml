@@ -90,6 +90,10 @@
     <string name="booth">Booth</string>
     <string name="schedule_success">Your meeting has been scheduled successfully.</string>
     <string name="website">"WebSite: "</string>
+    <string name="contact">"Contact: "</string>
+    <string name="phone">"Phone: "</string>
+    <string name="address">"Address: "</string>
+    <string name="mobile">"Mobile: "</string>
     <string name="setup_meeting">", would like to setup a meeting."</string>
 
     <!-- Labels on myCollateral Activity -->
@@ -133,6 +137,22 @@
     <string name="neutral">Neutral</string>
     <string name="lesser">Lesser</string>
     <string name="worst">Worst</string>
+
+    <string-array name="quality_titles">
+        <item>Worst</item>
+        <item>Lesser</item>
+        <item>Neutral</item>
+        <item>Better</item>
+        <item>Best</item>
+    </string-array>
+
+    <string-array name="feeling_titles">
+        <item>Poor</item>
+        <item>Fair</item>
+        <item>Good</item>
+        <item>Very Good</item>
+        <item>Excellent</item>
+    </string-array>
     
     <string name="submit">Submit</string>
     

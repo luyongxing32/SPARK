@@ -17,6 +17,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.view.View;
@@ -226,6 +227,15 @@ public abstract class Activity2 extends Activity implements View.OnClickListener
 			image.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
 			image.setPadding(10, 10, 10, 10);
 			image.setScaleType(ScaleType.FIT_XY);
+
+            final String link_url = result.sponsor_link;
+            image.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(link_url));
+                    startActivity(intent);
+                }
+            });
 			new GetImageTask(image).execute(result.sponsor_url);
 			
 			mSponsorView.addView(image);

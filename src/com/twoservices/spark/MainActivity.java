@@ -68,11 +68,20 @@ public class MainActivity extends Activity2 {
 		loadSponsors(Action.HOME);
 	}
 
-	@Override
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
+
+    @Override
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.img_title_back:
-			startActivity(new Intent(MainActivity.this, LandingActivity.class));
+            AccountInfo.sLoggedIn = false;
+			startActivity(new Intent(MainActivity.this, LoginActivity.class));
 			return;
 		}
 
@@ -111,6 +120,11 @@ public class MainActivity extends Activity2 {
 	 *            selected view
 	 */
 	public void gotoEventView(View view) {
+        if (!AccountInfo.sLoggedIn) {
+            Utils.logout(MainActivity.this);
+            return;
+        }
+
 		Intent intent = new Intent();
 		EventItem item = (EventItem) view.getTag();
 

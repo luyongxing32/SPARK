@@ -22,11 +22,20 @@ public class ExhibitorDetailResult implements IDetailResult {
 	
 	@SerializedName("BOOTH")
 	public String booth;
-	
-	@SerializedName("LOGO_URL")
-	public String logo_url;
-	
-	@SerializedName("WEBSITE")
+
+    @SerializedName("CONTACT")
+    public String contact;
+
+    @SerializedName("PHONE")
+    public String phone;
+
+    @SerializedName("ADDRESS")
+    public String address;
+
+    @SerializedName("LOGO_URL")
+    public String logo_url;
+
+    @SerializedName("WEBSITE")
 	public String website;
 	
 	@SerializedName("EMAIL")

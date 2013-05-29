@@ -109,7 +109,12 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 		initInstance();
 	}
 
-	/** Called when a view has been clicked. */
+    @Override
+    public void onBackPressed() {
+        moveTaskToBack(true);
+    }
+
+    /** Called when a view has been clicked. */
 	@Override
 	public void onClick(View v) {
 		int id = v.getId();
@@ -156,7 +161,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 		
 		if (DEBUG) {
 			mEditEmail.setText("erick@higherstandard.com");
-			mEditPassword.setText("test");
+			mEditPassword.setText("muse");
 		}
 		
 		mTextPasswdReset = (TextView) mLayoutLoginInput.findViewById(R.id.text_passwd_reset);
@@ -243,6 +248,8 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 			
 			// send my email and password to engage service, then check the login result.
 			if ((response != null) && Feedback.isSuccess()) {
+                AccountInfo.sLoggedIn = true;
+
 				if (Feedback.sServiceResponse.total_results > 1) {
 					// goto project activity
 					Intent intent = new Intent(mContext, ProjectsActivity.class);
