@@ -143,8 +143,11 @@ public class ExhibitorsDetailActivity extends ItemDetailActivity implements View
 			mTextItemTime.setVisibility(View.GONE);
 			mTextItemContent.setText(detailResult.description);
 			mTextItemAuthor.setVisibility(View.GONE);
-		}
-		
+
+            if (TextUtils.isEmpty(detailResult.schedule_meeting))
+                mBtnGreen2.setVisibility(View.GONE);
+        }
+
 		setTextOnActionButtons();
 	}
 	
@@ -167,7 +170,6 @@ public class ExhibitorsDetailActivity extends ItemDetailActivity implements View
 		
 		mBtnBlack.setVisibility(View.GONE);
 		mBtnGreen2.setText(R.string.schedule_meeting);
-        mBtnGreen2.setVisibility(View.GONE);
 	}
 	
 	/**

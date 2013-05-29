@@ -40,8 +40,11 @@ public class ExhibitorDetailResult implements IDetailResult {
 	
 	@SerializedName("EMAIL")
 	public String email;
-	
-	@SerializedName("UU_EXHIBITOR_ID")
-	public String exhibitor_id;
-	
+
+    @SerializedName("SCHEDULE_MEETING")
+    public String schedule_meeting;
+
+    @SerializedName("UU_EXHIBITOR_ID")
+    public String exhibitor_id;
+
 }
